@@ -6,7 +6,6 @@ int main() {
     char x;
     int i,j,ans;
     while (1) {
-        printf("enter a letter (A,B,C) \n");
         scanf("%c", &x);
         if (x == 'A') {
             build_mat();

@@ -12,7 +12,7 @@ void build_mat(){
                 arr[i][j]=0;
             }
             else{
-                printf("enter weight for: %d,%d ",i,j);
+                // printf("enter weight for: %d,%d ",i,j);
                 scanf("%d", &weight);
                 arr[i][j] = weight;
                 arr[j][i] = weight;
