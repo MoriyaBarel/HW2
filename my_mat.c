@@ -8,18 +8,11 @@ void build_mat(){
     int i,j,weight;
     for (i = 0; i < len; i++){
         for (j = 0; j < len; j++){
-            if(i==j){
-                arr[i][j]=0;
-            }
-            else{
-                // printf("enter weight for: %d,%d ",i,j);
-                scanf("%d", &weight);
-                arr[i][j] = weight;
-                // arr[j][i] = weight;
-            } 
-        }  
+            scanf("%d", &weight);
+            arr[i][j] = weight;
+        } 
     }  
-}
+}  
 
 void path(int i, int j){
     if(shortest_path(i,j) == -1){
