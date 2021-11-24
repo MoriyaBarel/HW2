@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "my_mat.h"
-#define len 10
-#define MAX 99999999
-int arr[len][len];
+#define len 10 //length of the array
+#define MAX 99999999 // max value
+int arr[len][len]; // initialize the global array 
 
+// A function that creates the matrix
 void build_mat(){
     int i,j,weight;
     for (i = 0; i < len; i++){
@@ -14,6 +15,7 @@ void build_mat(){
     }  
 }  
 
+// A function that returns if there is a path from vertex to vertex
 void path(int i, int j){
     if(shortest_path(i,j) == -1){
         printf("False\n");
@@ -22,6 +24,7 @@ void path(int i, int j){
     } 
 }
 
+// A function that returns the shortest path between two vertices (If there is one) using Floyd Warshall algorithm.
 int shortest_path(int i,int j){
     int temp[len][len];
     for (int x=0 ; x < len; x++){
@@ -48,6 +51,7 @@ int shortest_path(int i,int j){
                 }
             }
         }
+
     if (temp[i][j] != MAX && temp[i][j] != 0) {
         int ans = temp[i][j];
         return ans;
